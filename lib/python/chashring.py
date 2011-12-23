@@ -98,10 +98,10 @@ class HashRing(object):
         hash_ring.hash_ring_free(self._hash_ring_ptr)
 
 @contextmanager
-def create_hash_ring(nodes):
+def create_hash_ring(*args, **kwargs):
     """ Use this to safely use a HashRing object without worrying about having to
         call 'free' afterwards.
     """
-    h = HashRing(nodes)
+    h = HashRing(*args, **kwargs)
     yield h
     h.free()
