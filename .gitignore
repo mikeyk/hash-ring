@@ -5,3 +5,7 @@ ebin
 priv
 c_src/*.o
 .eunit
+*.o
+*.bundle
+*.log
+Makefile
